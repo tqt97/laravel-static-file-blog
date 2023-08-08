@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
+Route::get('/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/tags/{tag}', [TagController::class,'show'])->name('tags.show');

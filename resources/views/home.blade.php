@@ -1,3 +1,11 @@
-<x-app-layout>
-    <h1>List Blog here</h1>
-</x-app-layout>
+<div class="space-y-16">
+    @if ($posts->count())
+        @foreach ($posts as $post)
+            {{ $post }}
+        @endforeach
+
+        {{ $posts->links() }}
+    @else
+        <p>Nothing here yet.</p>
+    @endif
+</div>

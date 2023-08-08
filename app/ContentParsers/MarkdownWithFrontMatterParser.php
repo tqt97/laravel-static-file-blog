@@ -13,7 +13,9 @@ class MarkdownWithFrontMatterParser implements ContentParser
     {
         $document = YamlFrontMatter::parse($contents);
 
-        $htmlContents = app(MarkdownRenderer::class)->toHtml($document->body());
+        $htmlContents = app(MarkdownRenderer::class)
+                        // ->highlightTheme('dracula')
+                        ->toHtml($document->body());
 
         return array_merge(
             $document->matter(),

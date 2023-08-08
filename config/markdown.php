@@ -15,7 +15,7 @@ return [
          * More info: https://github.com/shikijs/shiki/blob/main/docs/themes.md
          * nord, github-light
          */
-        'theme' => 'nord',
+        'theme' => 'dracula',
     ],
 
     /*
