@@ -13,8 +13,9 @@ return [
          * The name of or path to a Shiki theme
          *
          * More info: https://github.com/shikijs/shiki/blob/main/docs/themes.md
+         * nord, github-light
          */
-        'theme' => 'github-light', // nord
+        'theme' => 'nord',
     ],
 
     /*
