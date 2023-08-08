@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
@@ -36,6 +37,15 @@ class AppServiceProvider extends ServiceProvider
             $paginator->setPath(request()->url());
 
             return $paginator;
+        });
+
+        Str::macro('readingMinutes', function ($subject, $wordsPerMinutes = 200) {
+            $count = str(strip_tags($subject))->wordCount();
+            $min = intval(ceil(Str::wordCount(strip_tags($subject)) / $wordsPerMinutes));
+
+            $text = $min > 1 ? 'minutes' : 'minute';
+
+            return $count .' characters with '. $min . ' ' . $text;
         });
     }
 }
