@@ -54,4 +54,26 @@
         Content here !
     ```
 
+#### ** Enhancement
+1. ##### Make command to generate bootstrap blog file
+    - Install dependencies
+        ```
+            npm i --save prompts
+            npm i --save dedent
+        ```
+    - Run command by
+        ```[js]
+        node generatePost.js
+        ```
+        And result
+
+        ```[md]
+                ---
+                title: New Blog
+                author: Tuantq
+                tags: []
+                teaser:
+                ---
+                Content go here !
+        ```
 
