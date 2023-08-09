@@ -15,11 +15,16 @@
 </head>
 
 <body class="antialiased">
-    <div class="max-w-2xl mx-auto py-16">
-        <a href="{{ route('posts.index') }}"
-            class="inline-block text-2xl font-extrabold hover:text-blue-500 transition-colors duration-100">{{ config('app.name') }}</a>
+    <x-header/>
+
+    <div class="flex flex-col justify-between">
+
         <main class="mt-16">
-            {{ $slot }}
+            <div class="mx-auto max-w-3xl px-3 sm:px-6 xl:max-w-5xl xl:px-0">
+                {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full"> --}}
+                    {{ $slot }}
+                {{-- </div> --}}
+            </div>
         </main>
     </div>
 </body>

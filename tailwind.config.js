@@ -10,6 +10,13 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans]
+            },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        maxWidth: '100ch', // add required value here
+                    }
+                }
             }
         },
     },

@@ -11,7 +11,7 @@ class PostController extends Controller
     public function index()
     {
         return view('pages.posts.index', [
-            'posts' => Sheets::collection('posts')->all()->sortByDesc('date')->paginate(10)
+            'posts' => Sheets::collection('posts')->all()->sortByDesc('date')->paginate(5)
         ]);
     }
 
