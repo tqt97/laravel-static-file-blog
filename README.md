@@ -1,5 +1,9 @@
 # Build Blog Laravel 10 with markdown file
+<hr>
 
+![screenshot](./screenshot.png)
+
+<hr>
 
 ### How to clone
 - Clone this project
