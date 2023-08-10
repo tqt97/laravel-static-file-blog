@@ -15,18 +15,17 @@
 </head>
 
 <body class="antialiased">
-    <x-header/>
+    <x-layouts.header />
 
     <div class="flex flex-col justify-between">
-
-        <main class="mt-16">
+        <main class="my-16">
             <div class="mx-auto max-w-3xl px-3 sm:px-6 xl:max-w-5xl xl:px-0">
-                {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full"> --}}
-                    {{ $slot }}
-                {{-- </div> --}}
+                {{ $slot }}
             </div>
         </main>
     </div>
+
+    <x-layouts.footer/>
 </body>
 
 </html>
