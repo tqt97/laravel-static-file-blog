@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\CloneProjectSetup;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -21,6 +22,7 @@ class Kernel extends ConsoleKernel
     protected function commands(): void
     {
         $this->load(__DIR__.'/Commands');
+        CloneProjectSetup::class;
 
         require base_path('routes/console.php');
     }
